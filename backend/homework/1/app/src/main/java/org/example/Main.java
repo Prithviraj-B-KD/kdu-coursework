@@ -118,8 +118,12 @@ public class Main {
                 case 6:
                     LogBack.filelogger().debug("Exiting the Application");
                     running=false;
+                    break;
                 default:
                     System.out.println("Invalid choice. Please try again.");
+            }
+            if(running==false){
+                break;
             }
         }
 
