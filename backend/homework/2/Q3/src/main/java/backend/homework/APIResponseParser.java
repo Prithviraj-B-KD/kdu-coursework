@@ -35,7 +35,6 @@ public class APIResponseParser {
         // Parse publication year
         startRule ="<original_publication_year type=\"integer\">";
         String  publicationYear = parse(response,startRule , endRule);
-        System.out.println(publicationYear);
         book.setPublicationYear(Integer.parseInt(publicationYear));
 
         // Parse average rating
@@ -93,11 +92,11 @@ public class APIResponseParser {
         Book responseBook = APIResponseParser.parse(response);
 
         if(responseBook!=null){
-            logger.info("Book titile: "+responseBook.getTitle());
-            logger.info("Book author: "+responseBook.getAuthor());
-            logger.info("Book publication year: "+ responseBook.getPublicationYear());
-            logger.info("Book average rating: "+ responseBook.getAverageRating());
-            logger.info("Book ratings count: "+ responseBook.getRatingsCount());
+            logger.info("Book titile: {}",responseBook.getTitle());
+            logger.info("Book author: {}",responseBook.getAuthor());
+            logger.info("Book publication year: {}", responseBook.getPublicationYear());
+            logger.info("Book average rating: {}", responseBook.getAverageRating());
+            logger.info("Book ratings count: {}", responseBook.getRatingsCount());
 
         } else  {
             logger.error("Failed to Parse!");
