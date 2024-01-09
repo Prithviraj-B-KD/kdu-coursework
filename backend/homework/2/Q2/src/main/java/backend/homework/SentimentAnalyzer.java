@@ -77,7 +77,6 @@ public class SentimentAnalyzer {
         int opinionIndex = review.indexOf(pattern);
         if (opinionIndex != -1) {
             String checkString = review.substring(opinionIndex+pattern.length()).trim();
-            System.out.println(checkString);
             for (String posOpinion : posOpinionWords) {
                 if (checkString.startsWith(posOpinion)) {
                     opinion = 1;
