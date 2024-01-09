@@ -5,6 +5,10 @@ package backend.homework;
  * @author [Your Name]
  */
 public class StudentUtil {
+    private StudentUtil() {
+    throw new IllegalStateException("Utility class");
+  }
+
 
     /**
      * Calculates the GPAs for a list of students based on their grades.
@@ -41,7 +45,7 @@ public class StudentUtil {
     public static int[] getStudentsByGPA(double lower, double higher, int[]
             studentIdList, char[][] studentsGrades) {
         if (lower < 0 || higher < 0 || lower > higher) {
-            return null; // Invalid input
+            return new int[0]; // Invalid input
         }
         double[] studentGpa = calculateGPA(studentIdList,studentsGrades);
         int count=0;
