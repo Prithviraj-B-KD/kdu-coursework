@@ -4,7 +4,7 @@ import backend.handson.LogBack;
 
 public class BlueCrossBlueShield implements InsuranceBrand{
     public static double[] platinum(int age,boolean smoking){
-        double[] arr
+        double[] arr;
         if(age > 55){
             arr[0] = 200;
         }
