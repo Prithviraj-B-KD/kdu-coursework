@@ -4,6 +4,9 @@ import backend.handson.LogBack;
 import backend.handson.q1.Patient;
 
 public class Billing {
+    private Billing() {
+        throw new IllegalStateException("Utility class");
+    }
 
     /**
      * Computes the payment amounts for a patient based on their insurance plan and any applicable discounts.
@@ -47,7 +50,7 @@ public class Billing {
         } else if (patientInsurancePlan instanceof BronzePlan && patientPayment > 25) {
             patientPayment = patientPayment -25;
         } else {
-                LogBack.Outputlogger("Invalid insurance plan type","ERROR");
+                LogBack.outputlogger("Invalid insurance plan type","ERROR");
                 throw new IllegalArgumentException("Invalid insurance plan type");
 
 

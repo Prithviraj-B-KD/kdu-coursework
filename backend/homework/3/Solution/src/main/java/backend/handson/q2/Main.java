@@ -3,10 +3,6 @@ package backend.handson.q2;
 import backend.handson.LogBack;
 import backend.handson.q1.Doctor;
 import backend.handson.q1.Patient;
-import backend.handson.q1.User;
-
-import javax.print.Doc;
-import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args){

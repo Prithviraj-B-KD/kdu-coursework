@@ -3,49 +3,68 @@ package backend.handson.q4;
 import backend.handson.LogBack;
 
 public class BlueCrossBlueShield implements InsuranceBrand{
+    public static double[] platinum(int age,boolean smoking){
+        double[] arr = new double[2];
+        if(age > 55){
+            arr[0] = 200;
+        }
+        if(smoking){
+            arr[1] = 100;
+        }
+        return arr;
+    }public static double[] gold(int age,boolean smoking){
+        double[] arr = new double[2];
+        if(age > 55){
+            arr[0] = 150;
+        }
+        if(smoking){
+            arr[1] = 90;
+        }
+        return arr;
+    }
+    public static double[] silver(int age,boolean smoking){
+        double[] arr = new double[2];
+        if(age > 55){
+            arr[0] = 100;
+        }
+        if(smoking){
+            arr[1] = 80;
+        }
+        return arr;
+    }
+    public static double[] bronze(int age,boolean smoking){
+        double[] arr = new double[2];
+        if(age > 55){
+            arr[0] = 50;
+        }
+        if(smoking){
+            arr[1] = 70;
+        }
+        return arr;
+    }
 
     /**
      Calculates the monthly premium for a Blue Cross Blue Shield health insurance plan.
      @param insurancePlan The type of health insurance plan.
-     @param age           The age of the insured individual.
-     @param userSmoke     True if the insured individual smokes, false otherwise.
+     @param age The age of the insured individual.
+     @param userSmoke True if the insured individual smokes, false otherwise.
      @return The calculated monthly premium amount.
      @throws IllegalArgumentException if the provided insurancePlan is not a valid plan type.
      */
     public double computeMonthlyPremium(HealthInsurancePlan insurancePlan, int age, boolean userSmoke) {
-        double answer = 0.0;
+        double[] answer = new double[2];
         if (insurancePlan instanceof PlatinumPlan) {
-            if (age > 55) {
-                answer += 200.0;
-            }
-            if (userSmoke) {
-                answer += 100.0;
-            }
+          answer = platinum(age,userSmoke)
         } else if (insurancePlan instanceof GoldPlan) {
-            if (age > 55) {
-                answer += 150.0;
-            }
-            if (userSmoke) {
-                answer += 90.0;
-            }
+            answer = gold(age,userSmoke)
         } else if (insurancePlan instanceof SilverPlan) {
-            if (age > 55) {
-                answer += 100.0;
-            }
-            if (userSmoke) {
-                answer += 80.0;
-            }
+            answer = silver(age,userSmoke)
         } else if (insurancePlan instanceof BronzePlan) {
-            if (age > 55) {
-                answer += 50.0;
-            }
-            if (userSmoke) {
-                answer += 70.0;
-            }
+            answer = bronze(age,userSmoke)
         } else {
-            LogBack.Outputlogger("Invalid insurance plan type","ERROR");
+            LogBack.outputlogger("Invalid insurance plan type","ERROR");
             throw new IllegalArgumentException("Invalid insurance plan type");
         }
-        return answer;
+        return answer[0]+answer[1];
     }
 }
