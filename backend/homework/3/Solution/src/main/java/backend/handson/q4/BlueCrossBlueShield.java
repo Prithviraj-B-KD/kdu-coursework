@@ -42,7 +42,6 @@ public class BlueCrossBlueShield implements InsuranceBrand{
         }
         return arr;
     }
-
     /**
      Calculates the monthly premium for a Blue Cross Blue Shield health insurance plan.
      @param insurancePlan The type of health insurance plan.
@@ -54,13 +53,13 @@ public class BlueCrossBlueShield implements InsuranceBrand{
     public double computeMonthlyPremium(HealthInsurancePlan insurancePlan, int age, boolean userSmoke) {
         double[] answer = new double[2];
         if (insurancePlan instanceof PlatinumPlan) {
-          answer = platinum(age,userSmoke)
+          answer = platinum(age,userSmoke);
         } else if (insurancePlan instanceof GoldPlan) {
-            answer = gold(age,userSmoke)
+            answer = gold(age,userSmoke);
         } else if (insurancePlan instanceof SilverPlan) {
-            answer = silver(age,userSmoke)
+            answer = silver(age,userSmoke);
         } else if (insurancePlan instanceof BronzePlan) {
-            answer = bronze(age,userSmoke)
+            answer = bronze(age,userSmoke);
         } else {
             LogBack.outputlogger("Invalid insurance plan type","ERROR");
             throw new IllegalArgumentException("Invalid insurance plan type");
