@@ -4,7 +4,7 @@ import backend.handson.LogBack;
 
 public class BlueCrossBlueShield implements InsuranceBrand{
     public static double[] platinum(int age,boolean smoking){
-        double[] arr = new double[2];
+        double[] arr
         if(age > 55){
             arr[0] = 200;
         }
@@ -51,7 +51,7 @@ public class BlueCrossBlueShield implements InsuranceBrand{
      @throws IllegalArgumentException if the provided insurancePlan is not a valid plan type.
      */
     public double computeMonthlyPremium(HealthInsurancePlan insurancePlan, int age, boolean userSmoke) {
-        double[] answer = new double[2];
+        double[] answer;
         if (insurancePlan instanceof PlatinumPlan) {
           answer = platinum(age,userSmoke);
         } else if (insurancePlan instanceof GoldPlan) {
