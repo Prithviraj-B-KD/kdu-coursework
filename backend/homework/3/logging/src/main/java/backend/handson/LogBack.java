@@ -19,7 +19,7 @@ public class LogBack {
     }
 
 
-    public static void outputlogger(String message, String level) {
+    public static void outputLogger(String message, String level) {
 
         switch (level) {
             case "DEBUG": logger.debug(message);break;

@@ -50,7 +50,7 @@ public class Billing {
         } else if (patientInsurancePlan instanceof BronzePlan && patientPayment > 25) {
             patientPayment = patientPayment -25;
         } else {
-                LogBack.outputlogger("Invalid insurance plan type","ERROR");
+                LogBack.outputLogger("Invalid insurance plan type","ERROR");
                 throw new IllegalArgumentException("Invalid insurance plan type");
 
 

@@ -61,7 +61,7 @@ public class BlueCrossBlueShield implements InsuranceBrand{
         } else if (insurancePlan instanceof BronzePlan) {
             answer = bronze(age,userSmoke);
         } else {
-            LogBack.outputlogger("Invalid insurance plan type","ERROR");
+            LogBack.outputLogger("Invalid insurance plan type","ERROR");
             throw new IllegalArgumentException("Invalid insurance plan type");
         }
         return answer[0]+answer[1];
