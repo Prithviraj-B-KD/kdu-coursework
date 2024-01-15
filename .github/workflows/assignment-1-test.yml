@@ -2,8 +2,6 @@ name: Assignment 1 test run
 
 on:
   push:
-    paths:
-      - 'backend/assignments/1'
     branches:
       - main # the name of your main branch
   pull_request:
@@ -25,7 +23,7 @@ jobs:
           architecture: x64
 
       - name: Clean Maven workspace
-        run: mvn clean
+        run: cd ./backend/assignments/1 && mvn clean
 
       - name: Install and Run tests
-        run: mvn install
+        run: cd ./backend/assignments/1 && mvn install
