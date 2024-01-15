@@ -2,6 +2,8 @@ name: Assignment 1 test run
 
 on:
   push:
+    paths:
+      - 'backend/assignments/1'
     branches:
       - main # the name of your main branch
   pull_request:
