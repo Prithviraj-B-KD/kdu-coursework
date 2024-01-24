@@ -20,12 +20,23 @@ public class VehicleController {
     VehicleController(FactoryService factoryService){
         this.factoryService = factoryService;
     }
+
+    /**
+     *
+     * @param vehicleDTO is passed to factory Service
+     * @return ok message on successfull retrieval
+     */
     @PostMapping
     public ResponseEntity<String> addVehicle(@Valid @RequestBody VehicleDTO vehicleDTO){
         factoryService.addVehicle(vehicleDTO);
         return ResponseEntity.ok("SuccessFully Added.");
     }
 
+    /**
+     *
+     * @param id
+     * @return the vehicleDTO with id passed
+     */
     @GetMapping("/{id}")
     public ResponseEntity<VehicleDTO> getVehicleById(@PathVariable Long id){
         Vehicle vehicle = factoryService.getVehicle(id);
@@ -33,17 +44,38 @@ public class VehicleController {
         return ResponseEntity.ok(vehicleDTO);
     }
 
+    /**
+     *
+     * @param id takes Id has input and VehicleDTO
+     * @return OK message on update
+     */
     @PutMapping("/{id}")
     public ResponseEntity<String> updateVehicleByID(@PathVariable Long id,@Valid @RequestBody VehicleDTO vehicleDTO){
         factoryService.updateVehicle(id,vehicleDTO);
         return ResponseEntity.ok("Successfully updated");
     }
 
+    /**
+     *
+     * @param id takes Id has input
+     * @return OK message on delete
+     */
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deletelVehicleById(@PathVariable Long id){
         factoryService.deleteVehicle(id);
         return ResponseEntity.ok("successfully deleted");
     }
 
+    /**
+     *
+     * @param type take type -> highest or Cheapest
+     * @return VehicleDTO as response
+     */
+    @GetMapping("/sortPrice/{type}")
+    public  ResponseEntity<VehicleDTO> sortVehiclePrice(@PathVariable String type) {
+        Vehicle vehicle = factoryService.sortPrice(type);
+        VehicleDTO vehicleDTO = VehicleDTOMapper.vehicleToDTO(vehicle);
+        return ResponseEntity.ok(vehicleDTO);
+    }
 
 }

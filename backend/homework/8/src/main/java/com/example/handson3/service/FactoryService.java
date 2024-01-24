@@ -30,6 +30,11 @@ public class FactoryService implements VehicleFactory{
         return vehicle;
     }
 
+    /**
+     *
+     * @param id take vehicle id
+     * @param vehicleDTO take vehicleDTO object and maps to get vehicle and adds the vehicle object to  inventory
+     */
     @Override
     public void updateVehicle(Long id, VehicleDTO vehicleDTO) {
         Vehicle vehicle = VehicleDTOMapper.DTOToVehicle(vehicleDTO);
@@ -43,4 +48,20 @@ public class FactoryService implements VehicleFactory{
         inventory.deleteVehicleByID(id);
         LogBack.infoLogger("Vehicle Deleted");
     }
+
+    /**
+     *
+     * @param type checks the type and calls the appropriate method to serve the request
+     * @return vehicle
+     */
+    @Override
+    public Vehicle sortPrice(String type) {
+       if(type.equals("Highest")){
+           return inventory.getHighestPriceVehicle();
+       } else {
+           return inventory.getCheapestPriceVehicle();
+       }
+
+    }
+
 }

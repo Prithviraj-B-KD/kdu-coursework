@@ -8,7 +8,7 @@ public interface VehicleFactory {
     public Vehicle getVehicle(Long id);
     public void updateVehicle(Long id,VehicleDTO vehicleDTO);
     public void deleteVehicle(Long id);
-
+    public Vehicle sortPrice(String type);
 
 
 

@@ -3,7 +3,9 @@ package com.example.handson3.repositories;
 import com.example.handson3.model.Vehicle;
 import org.springframework.stereotype.Repository;
 
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Repository
@@ -24,5 +26,21 @@ public class InventoryRepository {
 
     public void deleteVehicleByID(Long id){
         vehicles.remove(id);
+    }
+
+    /**
+     *
+     * @return  the vehicle with highest price
+     */
+    public Vehicle getHighestPriceVehicle(){
+        return vehicles.values().stream().max(Comparator.comparing(Vehicle::getPrice)).orElse(null);
+    }
+
+    /**
+     *
+     * @return the vehicle with cheapest price
+     */
+    public Vehicle getCheapestPriceVehicle(){
+        return vehicles.values().stream().min(Comparator.comparing(Vehicle::getPrice)).orElse(null);
     }
 }
