@@ -1,7 +1,7 @@
-package com.example.assignment2.exception;
+package com.caching.exception;
 
-import com.example.assignment2.dto.ErrorDTO;
-import com.example.assignment2.exception.customException.JsonResponseNodeException;
+import com.caching.dto.ErrorDTO;
+import com.caching.exception.customException.JsonResponseNodeException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

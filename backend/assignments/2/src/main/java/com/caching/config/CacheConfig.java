@@ -1,4 +1,4 @@
-package com.example.assignment2.config;
+package com.caching.config;
 
 import com.github.benmanes.caffeine.cache.Caffeine;
 import org.springframework.cache.CacheManager;

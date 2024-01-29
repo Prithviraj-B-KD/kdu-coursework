@@ -1,4 +1,4 @@
-package com.example.assignment2;
+package com.caching;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

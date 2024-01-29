@@ -1,4 +1,4 @@
-package com.example.assignment2.dto;
+package com.caching.dto;
 
 import lombok.Builder;
 import lombok.Data;

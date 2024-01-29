@@ -1,9 +1,10 @@
-package com.example.assignment2.service;
+package com.caching.service;
 
-import com.example.assignment2.dto.GeoCodingRequestDTO;
-import com.example.assignment2.dto.GeoCodingResponseDTO;
-import com.example.assignment2.dto.ReverseGeoCodingRequestDTO;
-import com.example.assignment2.dto.ReverseGeoCodingResponseDTO;
+
+import com.caching.dto.GeoCodingRequestDTO;
+import com.caching.dto.GeoCodingResponseDTO;
+import com.caching.dto.ReverseGeoCodingRequestDTO;
+import com.caching.dto.ReverseGeoCodingResponseDTO;
 
 public interface GeoCoding {
     public GeoCodingResponseDTO getGeoCoding(GeoCodingRequestDTO requestDTO);

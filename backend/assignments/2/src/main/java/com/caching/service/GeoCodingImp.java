@@ -1,11 +1,11 @@
-package com.example.assignment2.service;
+package com.caching.service;
 
-import com.example.assignment2.dto.GeoCodingRequestDTO;
-import com.example.assignment2.dto.GeoCodingResponseDTO;
-import com.example.assignment2.dto.ReverseGeoCodingRequestDTO;
-import com.example.assignment2.dto.ReverseGeoCodingResponseDTO;
-import com.example.assignment2.exception.customException.JsonResponseNodeException;
-import com.example.assignment2.util.URIMaker;
+import com.caching.dto.GeoCodingRequestDTO;
+import com.caching.dto.GeoCodingResponseDTO;
+import com.caching.dto.ReverseGeoCodingRequestDTO;
+import com.caching.dto.ReverseGeoCodingResponseDTO;
+import com.caching.exception.customException.JsonResponseNodeException;
+import com.caching.util.URIMaker;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
@@ -21,9 +21,9 @@ import java.util.Objects;
 
 @Service
 @Slf4j
-public class GeoCodingImp implements GeoCoding{
+public class GeoCodingImp implements GeoCoding {
     private  RestTemplate restTemplate;
-    private  URIMaker uriMaker;
+    private URIMaker uriMaker;
     private  CacheManager cacheManager;
 
     @Autowired

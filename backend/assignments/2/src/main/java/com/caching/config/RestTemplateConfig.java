@@ -1,4 +1,4 @@
-package com.example.assignment2.config;
+package com.caching.config;
 
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;

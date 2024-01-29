@@ -1,10 +1,11 @@
-package com.example.assignment2.controller;
+package com.caching.controller;
 
-import com.example.assignment2.dto.GeoCodingRequestDTO;
-import com.example.assignment2.dto.GeoCodingResponseDTO;
-import com.example.assignment2.dto.ReverseGeoCodingRequestDTO;
-import com.example.assignment2.dto.ReverseGeoCodingResponseDTO;
-import com.example.assignment2.service.GeoCodingImp;
+
+import com.caching.dto.GeoCodingRequestDTO;
+import com.caching.dto.GeoCodingResponseDTO;
+import com.caching.dto.ReverseGeoCodingRequestDTO;
+import com.caching.dto.ReverseGeoCodingResponseDTO;
+import com.caching.service.GeoCodingImp;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
