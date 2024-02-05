@@ -6,6 +6,7 @@
     <title>Kickdrum</title>
 </head>
 <body>
+    <!--navbar-->
     <nav>
         <ul>
             <li><a href="#SERVICES">SERVICES</a></li>
@@ -27,11 +28,11 @@
     <section id="Details"  >
         <div class="details-description">
             <div class="details-descript-heading">
-    <h2>Builders. Not box checkers.</h2>
+            <h2>Builders. Not box checkers.</h2>
             </div>
-            <div class="details-descrip-content" >
+            <div  class="details-descrip-content" >
                 <p><strong>We are enterprise-grade engineers, architects, and strategists.</strong> With a design-driven philosophy, our development approach decreases 
-                    technical debt, improves customer experiences, and increases enterprise value.</p>
+                    technical debt,improves customer experiences, and increases enterprise value.</p>
             </div>
             <br>
             <div class="details-descrip-content">
@@ -153,21 +154,22 @@
     </code>
     <section id="Contact">
         <h2>Contact Form</h2>
+        <!--form-->
     <form action="submit.php" method="post">
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="name" required tabindex="1">
       <br>
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required>
       <br>
       <label for="password">password:</label>
-      <input type="password" id="password" name="password" required>
+      <input type="password" id="password" name="password" required tabindex="2">
       <br>
       <label for="telephone">Telephone:</label>
-      <input type="number" id="telephone" name="telephone" pattern="[0-9]{10}" required>
+      <input type="number" id="telephone" name="telephone" pattern="[0-9]{10}" required tabindex="3">
       <br>
       <label for="age">Age:</label>
-      <input type="number" id="telephone" name="telephone" pattern="[0-9]{10}" min=1 required>
+      <input type="number" id="telephone" name="telephone" pattern="[0-9]{10}" min=1 required tabindex="4">
       <br>
       <label for="message">Message:</label>
       <textarea id="message" name="message" rows="5" required></textarea>
@@ -182,12 +184,15 @@
         <option value="usa">USA</option>
         <option value="uk">UK</option>
         <br>
+        <!--submit-->
         <input type="submit" value="Send Message">
+        <!--reset-->
         <input type="reset" value="Reset">
       </form>
       </select>
     </section>
 </main>
+<!--footer-->
 <footer>
     <div class="footer">
     <div class="footer-name"><a href="https://www.kickdrum.com/home">Kickdrum</a></div>
