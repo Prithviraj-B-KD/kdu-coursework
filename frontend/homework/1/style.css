@@ -1,0 +1,293 @@
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+strong {
+  font-weight: 700;
+}
+.main-title-section .hero-image {
+  height: 70vh;
+  width: 100%;
+  background-image: url("images/kickdrum_hero.png");
+  background-position: center;
+  background-size: cover;
+}
+
+nav ul {
+  padding: 20 220px;
+  font-size: 2vh;
+  text-transform: uppercase;
+}
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #fff;
+  padding: 2vh 2.5vh;
+  font-style: normal;
+  font-family: Freight-Sans-Pro;
+  font-weight: 700;
+  letter-spacing: 0.1vh;
+  text-decoration: none;
+  line-height: 1em;
+}
+
+nav ul li a:hover {
+  cursor: pointer;
+  transition: 0.2s;
+  color: #de1a2e;
+  outline: none;
+}
+
+.hero-content {
+  color: #ffffff;
+  font-family: Lato;
+  word-wrap: normal;
+  padding: 0 15vh 0 30vh;
+}
+
+.hero-content h1 {
+  font-size: 77px;
+  font-style: normal;
+  font-family: Lato;
+  text-transform: none;
+}
+.hero-content h2 {
+  margin: 1.5em auto 0.3em;
+  white-space: pre-wrap;
+  font-size: 36px;
+}
+.hero-content h3 {
+  white-space: pre-wrap;
+  font-family: Lato;
+  font-size: 36px;
+  margin-bottom: 0;
+  font-weight: 100;
+  line-height: 1.5em;
+}
+
+#Details {
+  column-gap: 5vh;
+  height: 80vh;
+  padding: 10vh 25vh;
+  height: 150vh;
+  background-color: #ffffff;
+}
+
+.stats-item {
+  text-align: center;
+  margin-bottom: 3vh;
+}
+.details-stats {
+  display: inline;
+}
+.stat-number {
+  color: #26266d;
+  font-family: Lato;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 10vh;
+}
+
+.stat-detail {
+  color: rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.23px;
+  line-height: 1.37em;
+  font-family: Lato;
+  font-weight: 400;
+  font-size: 2.4vh;
+}
+.details-description {
+  display: inline;
+  word-wrap: break-word;
+}
+.details-descrip-content {
+  margin: 3vh;
+  color: rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.23px;
+  line-height: 1.37em;
+  font-style: normal;
+  font-size: 2.4vh;
+}
+.details-descript-heading {
+  display: inline;
+}
+
+.details-descript-heading h2 {
+  display: inline;
+  margin: 3vh;
+  font-family: Lato;
+  font-style: normal;
+  color: #130739;
+  font-weight: 700;
+  font-size: 3.4vh;
+}
+#value-addition {
+  padding: 7vh;
+}
+.value-addition-heading {
+  font-family: Lato;
+  color: #ffffff;
+  position: relative;
+  max-width: 150vh;
+  margin: 0 auto;
+  padding-bottom: 2vh;
+}
+.value-addition-heading h2 {
+  font-size: 9vh;
+}
+.value-addition-subheading {
+  font-family: Lato;
+  color: #ffffff;
+  position: relative;
+  max-width: 150vh;
+  margin: 0 auto;
+  padding-bottom: 4vh;
+}
+
+.sub-items {
+  position: relative;
+  color: #fff;
+  font-family: Lato;
+  text-align: center;
+  justify-content: center;
+  width: 30vh;
+  padding: 3vh;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+}
+.sub-items button {
+  margin-top: 1vh;
+  background: #130739;
+  color: #de1a2e;
+  border: 2px solid #de1a2e;
+  padding: 1vh 2vh;
+  font-family: Lato;
+  font-weight: 400;
+  font-size: 2vh;
+  border-radius: 0.5vh;
+  transition: 0.4s ease-in-out;
+}
+.sub-items button:hover {
+  cursor: pointer;
+  background: #de1a2e;
+  color: #fff;
+}
+
+#mike-biwer-quotes {
+  color: #fff;
+  background-position: center;
+  background-size: cover;
+  background-image: url("images/Diligence-Header-Opt-3.png");
+}
+/* Style the #Contact section */
+#Contact {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Style form elements */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* Style specific elements */
+#name,
+#email,
+#password,
+#telephone,
+#age {
+  width: 30%;
+}
+
+#message {
+  height: 150px;
+}
+
+#country {
+  width: 50%;
+}
+
+/* Style checkboxes */
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Style buttons */
+input[type="submit"],
+input[type="reset"] {
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+/* Hover effect for buttons */
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #2e8b57;
+}
+
+/* Add media queries for responsiveness as needed */
+@media only screen and (max-width: 768px) {
+  #Contact {
+    width: 90%;
+  }
+}
+
+footer {
+  background-color: #130739;
+}
+
+.footer-name a {
+  font-size: 4vh;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+}
+
+.footer-nav,
+.footer-social-icons,
+.footer-name {
+  display: inline-block;
+}
+
+.footer-nav ul li {
+  margin-bottom: 1vh;
+}
+.footer-nav ul li a {
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.footer-nav ul li:hover a {
+  color: #ff343c !important;
+  border-bottom: 1px solid #fff;
+}
+
+.footer-copyright {
+  font-size: 1.8vh;
+  color: #fff;
+}
