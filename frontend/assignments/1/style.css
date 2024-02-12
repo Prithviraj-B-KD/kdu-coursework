@@ -1,22 +1,43 @@
+@font-face {
+  font-family: Chirp;
+  src: url(fonts/Chirp-Regular.woff2);
+}
+@font-face {
+  font-family: ChirpBold;
+  src: url(fonts/Chirp-Bold.woff2);
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #e7e9ea;
+  font-family: Chirp, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.like-button {
+  background-color: #000;
+}
+.like-button img {
+  fill: red;
+}
+
 @media screen and (min-width: 415px) {
-  body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    color: #e7e9ea;
-  }
-  a {
-    text-decoration: none;
-  }
-  li {
-    list-style: none;
-  }
-  button {
-    border-radius: 624.938rem;
-    cursor: pointer;
-    background-color: #1c9bef;
-    color: #e7e9ea;
+  html {
+    font-size: 8px;
   }
   .container {
     display: flex;
@@ -24,67 +45,6 @@
   .x-logo img {
     width: 1.688rem;
     height: 1.64rem;
-  }
-  .mobile-nav-items {
-    display: none;
-  }
-  .mobile-nav-name {
-    display: none;
-  }
-  .active-button {
-    background-color: #1d9bf0;
-    color: white;
-  }
-  .inactive-button {
-    background-color: #0f4e78;
-    color: #808080;
-  }
-  .left-side {
-    border-right: 0.1px solid rgba(255, 255, 255, 0.3176470588);
-    padding-top: 0.75rem;
-    padding-left: 1.125rem;
-  }
-  .left-side .navigation-section {
-    height: 45.375rem;
-    margin-top: 0.3rem;
-    margin-left: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .left-side .navigation-section button {
-    padding: 0 2rem;
-  }
-  .left-side .navigation-section .side-option {
-    display: flex;
-    margin-left: 0.2rem;
-    margin-right: 0.1rem;
-    margin-top: 0;
-    align-items: center;
-  }
-  .left-side .navigation-section .side-option p {
-    font-size: 1.3rem;
-  }
-  .left-side .navigation-section .side-option img {
-    width: 1.29rem;
-    height: 1.369rem;
-    align-self: center;
-    margin-right: 2rem;
-  }
-  .left-side .navigation-section .post-button {
-    margin: 0.35rem 1rem 0.2rem 0.2rem;
-    background-color: #1d9bf0;
-    width: 10.443rem;
-    height: 2.7rem;
-    display: flex;
-    justify-content: center;
-    border-radius: 3rem;
-  }
-  .left-side .navigation-section .post-button button {
-    border: none;
-    color: #e7e9ea;
-    background-color: #1d9bf0;
-    font-size: 1rem;
   }
   .for-you {
     width: 15.444rem;
@@ -117,48 +77,63 @@
   .post-input-feature-buttons {
     padding: 0.125rem;
   }
+  .post-header {
+    padding-top: 1.5rem;
+    padding-left: 2rem;
+    font-size: 2rem;
+  }
+  .post-profile-name {
+    padding: 0;
+  }
+  .post {
+    border-bottom: 0.1px solid rgba(255, 255, 255, 0.3176470588);
+  }
+  .tweet-box {
+    border: 0.1px solid rgba(255, 255, 255, 0.3176470588);
+    width: 73rem;
+  }
   .tweet-box .input-container {
     padding-top: 0.25rem;
     padding-left: 2rem;
     display: flex;
     align-items: flex-start;
-    height: 7rem;
+    height: 22rem;
   }
   .tweet-box .input-container .profile-img {
-    padding-top: 0.75rem;
+    padding-top: 3rem;
   }
   .tweet-box .input-container .profile-img img {
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 8rem;
   }
   .tweet-box .input-container .post-input {
-    padding: 0.5rem;
-    width: 87%;
+    padding: 2rem;
+    width: 100%;
   }
   .tweet-box .input-container .post-input textarea {
     width: 100%;
-    padding-top: 0.9rem;
+    padding-top: 2.4rem;
     padding-left: 0.6rem;
     border: none;
-    color: #fff;
+    color: white;
     background-color: #000;
-    font-size: 1rem;
+    font-size: 2.5rem;
   }
   .tweet-box .input-data-container {
+    border-bottom: 0.1px solid rgba(255, 255, 255, 0.3176470588);
     display: flex;
     justify-content: space-between;
   }
   .tweet-box .input-data-container .input-icons {
     display: flex;
-    padding-left: 4.1rem;
-    padding-top: 0.5rem;
+    padding-left: 7.3rem;
     justify-content: space-around;
     width: 40%;
   }
   .tweet-box .input-data-container .input-icons .input-icon-items {
     fill: #1d9bf0;
-    width: 1.25rem;
+    width: 3rem;
   }
   .tweet-box .input-data-container .input-icons .input-icon-items .map {
     fill: #0f4e78;
@@ -169,21 +144,25 @@
     margin-right: 1rem;
   }
   .tweet-box .input-data-container .tweet-btn button {
-    font-size: 0.9rem;
+    font-size: 2rem;
     background-color: #0f4e78;
-    padding: 0.3rem;
+    padding: 1.5rem;
     border-radius: 5rem;
-    width: 4rem;
-    font-weight: 400;
+    width: 10rem;
+    font-size: 1.8rem;
+    font-weight: 600;
   }
   #input-profile-image {
     margin-right: 0.75rem;
     padding-top: 0.75rem;
   }
   .profile-image {
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 8rem;
+  }
+  .post-display {
+    padding-left: 1rem;
   }
   .profile {
     border-right: 0.1px solid rgba(255, 255, 255, 0.3176470588);
@@ -209,11 +188,12 @@
     align-self: center;
   }
   .post-icons {
+    padding-bottom: 0.75rem;
     display: flex;
     justify-content: space-evenly;
   }
   .post-icons .post-icon {
-    width: 1.5rem;
+    width: 3rem;
   }
   .post-Profile-title {
     display: flex;
@@ -221,19 +201,292 @@
   .post-header {
     display: flex;
   }
+  .profile-icon {
+    display: none;
+  }
+  .input-icons {
+    display: none;
+  }
+  .social {
+    display: none;
+  }
+  .navigation-section {
+    border-right: 0.1px solid rgba(255, 255, 255, 0.3176470588);
+    width: 35.5rem;
+  }
+  .navigation-section #desktop-xIcon {
+    width: 3.6rem;
+    margin-left: 3.5rem;
+    padding-top: 2rem;
+  }
+  .navigation-section #desktop-xIcon svg {
+    fill: #e7e9ea;
+  }
+  .navigation-section .navbar {
+    margin-top: 3rem;
+    margin-left: 2.5rem;
+  }
+  .navigation-section .navbar .desktop-view-items {
+    display: flex;
+    margin-left: 1.2rem;
+    margin-right: 1.8rem;
+    margin-top: 2.7rem;
+    align-items: center;
+  }
+  .navigation-section .navbar .mobile-desktop-view-items {
+    display: flex;
+    margin-left: 1.2rem;
+    margin-top: 2.7rem;
+    margin-right: 1.8rem;
+    align-items: center;
+  }
+  .navigation-section .navbar .nav-text {
+    color: #e7e9ea;
+    font-size: 2.7rem;
+  }
+  .navigation-section .navbar .nav-icon {
+    width: 3.2rem;
+    margin-right: 2rem;
+  }
+  .navigation-section .navbar .nav-icon svg {
+    fill: #e7e9ea;
+  }
+  .navigation-section .mobile-items {
+    display: none;
+  }
+  .navigation-section .mobile-name {
+    display: none;
+  }
+  .navigation-section .post-button {
+    margin: 3.5rem 0 2rem 2rem;
+    background-color: #1d9bf0;
+    width: 29rem;
+    height: 6.5rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 3rem;
+  }
+  .navigation-section .post-button button {
+    color: #e7e9ea;
+    background-color: #1d9bf0;
+    font-size: 2.5rem;
+  }
+  .navigation-section .footer {
+    margin: 10rem 3.1rem 0 3.2rem;
+    padding-bottom: 2.5rem;
+    display: flex;
+  }
+  .navigation-section .footer .img {
+    padding-top: 2rem;
+  }
+  .navigation-section .footer .img img {
+    align-self: flex-end;
+    width: 5rem;
+    border-radius: 3rem;
+  }
+  .navigation-section .footer .name {
+    padding-left: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #e7e9ea;
+    font-size: 2rem;
+  }
+  .navigation-section .footer .expand {
+    display: flex;
+    padding-left: 8rem;
+    font-size: 3rem;
+    align-items: center;
+    color: #e7e9ea;
+  }
+  .plus,
+  .floating-tweet-box-icon {
+    display: none;
+  }
 }
 @media screen and (max-width: 414px) {
   html {
     font-size: 9px;
   }
-  .profile-image {
+  .floating-tweet-box-icon {
+    position: absolute;
+    background-color: #1d9bf0;
+    right: 40px;
+    bottom: 30px;
+    border: 0;
+    border-radius: 50%;
+    padding: 8px 15px;
+    padding-top: 15px;
+  }
+  .floating-tweet-box-icon img {
+    width: 30px;
+    height: 30px;
+  }
+  .profile-icon {
     width: 35.5rem;
     padding-left: 2rem;
     padding-top: 2rem;
   }
-  .profile-image img {
+  .profile-icon img {
     height: 5rem;
     width: 5rem;
     border-radius: 8rem;
+  }
+  .header {
+    display: flex;
+  }
+  .header .add-btn .plus {
+    fill: #e7e9ea;
+    width: 4rem;
+    padding: 1rem;
+    margin-left: 2rem;
+    margin: 2rem 0 2rem 2rem;
+    border: #71767b solid 1px;
+    border-radius: 2rem;
+  }
+  .social {
+    display: flex;
+    color: #e7e9ea;
+    padding-top: 2rem;
+    justify-content: space-around;
+    font-size: 1.3rem;
+    width: 22rem;
+  }
+  .social .connection-text {
+    color: #71767b;
+  }
+  .navigation-section {
+    width: 30rem;
+  }
+  .navigation-section #desktop-xIcon {
+    display: none;
+  }
+  .navigation-section .navbar {
+    padding-top: 1rem;
+    padding-left: 1.1rem;
+  }
+  .navigation-section .navbar .desktop-view-items {
+    display: none;
+  }
+  .navigation-section .navbar .mobile-desktop-view-items {
+    display: flex;
+    margin-left: 1.2rem;
+    margin-top: 2.7rem;
+    margin-right: 1.8rem;
+    align-items: center;
+  }
+  .navigation-section .navbar .nav-text {
+    color: #e7e9ea;
+    font-size: 2.7rem;
+    font-weight: 400;
+  }
+  .navigation-section .navbar .nav-icon {
+    width: 3.2rem;
+    margin-right: 2.1rem;
+  }
+  .navigation-section .navbar .nav-icon svg {
+    fill: #e7e9ea;
+  }
+  .navigation-section .mobile-items {
+    display: flex;
+    margin-left: 1.2rem;
+    margin-top: 2.7rem;
+    margin-right: 1.8rem;
+    align-items: center;
+  }
+  .navigation-section .mobile-name {
+    padding-left: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #e7e9ea;
+    font-size: 2rem;
+  }
+  .navigation-section .post-button {
+    display: none;
+  }
+  .navigation-section .footer {
+    margin: 10rem 3.1rem 0 3.2rem;
+    padding-bottom: 15rem;
+    display: flex;
+  }
+  .navigation-section .footer .img img {
+    display: none;
+  }
+  .navigation-section .footer .name {
+    display: none;
+  }
+  .navigation-section .footer .expand {
+    display: none;
+  }
+  .tweet-box {
+    position: relative;
+    border: 0.1px solid rgba(255, 255, 255, 0.3176470588);
+    width: 45rem;
+  }
+  .tweet-box .input-container {
+    padding-top: 0.25rem;
+    padding-left: 2rem;
+    display: flex;
+    align-items: flex-start;
+    height: 22rem;
+  }
+  .tweet-box .input-container .profile-img {
+    padding-top: 4.5rem;
+  }
+  .tweet-box .input-container .profile-img img {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 8rem;
+  }
+  .tweet-box .input-container .post-input {
+    padding-top: 4rem;
+    padding-left: 2rem;
+    width: 87%;
+  }
+  .tweet-box .input-container .post-input textarea {
+    width: 100%;
+    padding-top: 2.4rem;
+    padding-left: 0.6rem;
+    border: none;
+    color: white;
+    background-color: #000;
+    font-size: 2.5rem;
+  }
+  .tweet-box .input-data-container {
+    border-top: 0.1px solid rgba(255, 255, 255, 0.3176470588);
+    display: flex;
+    justify-content: space-between;
+  }
+  .tweet-box .input-data-container .input-icons {
+    display: flex;
+    padding-top: 2rem;
+    padding-left: 1.3rem;
+    justify-content: space-around;
+    width: 60%;
+  }
+  .tweet-box .input-data-container .input-icons .input-icon-items {
+    fill: #1d9bf0;
+    width: 3rem;
+  }
+  .tweet-box .input-data-container .input-icons .input-icon-items .map {
+    fill: #0f4e78;
+  }
+  .tweet-box .input-data-container .tweet-btn {
+    align-self: flex-end;
+    padding-top: 0;
+    margin-right: 1rem;
+    position: absolute;
+    top: 3px;
+    right: 5px;
+  }
+  .tweet-box .input-data-container .tweet-btn button {
+    font-size: 2rem;
+    background-color: #0f4e78;
+    padding: 1.5rem;
+    border-radius: 5rem;
+    width: 10rem;
+    font-size: 1.8rem;
+    font-weight: 600;
   }
 }/*# sourceMappingURL=style.css.map */

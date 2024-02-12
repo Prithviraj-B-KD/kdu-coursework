@@ -9,84 +9,185 @@
 
   <body>
     <div class="container">
-      <div class="left-side">
-        <div class="navigation-section" id="desktop-view">
-          <!-- <div dir="ltr" class="css-1rynq56 r-bcqeeo r-qvutc0 r-37j5jr r-q4m81j r-a023e6 r-rjixqe r-b88u0q r-1awozwy r-6koalj r-18u37iz r-16y2uox r-1777fci" style="text-overflow: unset; color: rgb(239, 243, 244);"><svg viewBox="0 0 24 24" aria-hidden="true" class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-lrsllp r-1nao33i r-16y2uox r-8kz0gk"><g><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></g></svg><span class="css-1qaijid r-dnmrzs r-1udh08x r-3s2u2q r-bcqeeo r-qvutc0 r-poiln3 r-1inkyih r-rjixqe" style="text-overflow: unset;"></span></div> -->
-          <div class="x-logo"><img src="icons/logo.svg" /></div>
-          <div class="side-option">
-            <img src="icons/home.svg" alt="home icon" />
-            <p>Home</p>
+      <div class="navigation-section">
+        <div class="header">
+          <div class="profile-icon">
+            <img src="images/profile pic.png" alt="profile" />
           </div>
-          <div class="side-option">
-            <img src="icons/search.svg" alt="search icon" />
-            <p>Explore</p>
+          <div class="add-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="plus">
+              <g><path d="M11 11V4h2v7h7v2h-7v7h-2v-7H4v-2h7z"></path></g>
+            </svg>
           </div>
-          <div class="side-option">
-            <img src="icons/notification.svg" alt="notification icon" />
-            <p>Notifications</p>
+        </div>
+        <div class="mobile-name">
+          <div>Nitesh Gupta</div>
+          <div>@nit_hck</div>
+        </div>
+        <div class="social">
+          <div class="following">
+            1 <span class="connection-text">Following</span>
           </div>
-          <div class="side-option">
-            <img src="icons/message.svg" alt="message icon" />
-            <p>Messages</p>
+          <div class="followers">
+            0 <span class="connection-text">Followers</span>
           </div>
-          <div class="side-option">
-            <img src="icons/grok.svg" alt="grok icon" />
-            <p>Grok</p>
-          </div>
-          <div class="side-option">
-            <img src="icons/list.svg" alt="list icon" />
-            <p>Lists</p>
+        </div>
+        <div id="desktop-xIcon">
+          <img src="icons/logo.svg">
+        </div>
+
+        <div class="navbar">
+          <!-- home of desktop view-->
+          <div class="desktop-view-items">
+            <div class="nav-icon">
+              <img src="icons/home.svg" alt="x-logo icon"/>
+            </div>
+            <div class="nav-text">Home</div>
           </div>
 
-          <div class="side-option">
-            <img src="icons/bookmark.svg" alt="list icon" />
-            <p>Bookmarks</p>
-          </div>
-          <div class="side-option">
-            <img src="icons/communities.svg" alt="list icon" />
-            <p>Communitities</p>
-          </div>
-          <div class="side-option">
-            <img src="icons/logo.svg" alt="home icon" />
-            <p>Premium</p>
-          </div>
-          <div class="side-option">
-            <img src="icons/person.svg" alt="home icon" />
-            <p>Profile</p>
-          </div>
-          <div class="side-option">
-            <img src="icons/more.svg" alt="more icon" />
-            <p>More</p>
-          </div>
-          <div class="post-button"><button>Post</button></div>
-          <div class="profile">
-            <div class="profile-info">
-              <div class="profile-image">
-                <img
-                  class="profile-image"
-                  src="images/profile pic.png"
-                  alt=""
-                />
-              </div>
-              <div class="profile-title">
-                <div class="profile-name">Nitesh Gupta</div>
-                <div class="profile-username">@nit_hck</div>
-              </div>
+          <div class="desktop-view-items">
+            <div class="nav-icon">
+              <img src="icons/search.svg" alt="explore logo icon"/>
             </div>
-            <div class="profile-edit">
-              <img src="icons/three_dots.svg" />
-            </div>
+            <div class="nav-text">Explore</div>
           </div>
+
+          <!-- notification of desktop view-->
+          <div class="desktop-view-items">
+            <div class="nav-icon">
+             <img src="icons/notification.svg" alt="notification logo icon"/>
+            </div>
+            <div class="nav-text">Notifications</div>
+          </div>
+
+          <!-- messages of desktop view-->
+          <div class="desktop-view-items">
+            <div class="nav-icon">
+              <img src="icons/message.svg" alt="message logo icon" />
+            </div>
+            <div class="nav-text">Messages</div>
+          </div>
+
+          <!-- Grok of desktop view-->
+          <div class="desktop-view-items">
+            <div class="nav-icon">
+              <img src="icons/grok.svg" alt="grok logo icon "/>
+            </div>
+            <div class="nav-text">Grok</div>
+          </div>
+
+          <!-- Profile of mobile view-->
+          <div class="mobile-items">
+            <div class="nav-icon">
+              <img src="icons/person.svg" alt="profile logo icon" />
+            </div>
+            <div class="nav-text">Profile</div>
+          </div>
+
+          <!-- premium of mobile view-->
+          <div class="mobile-items">
+            <div class="nav-icon">
+              <img src="icons/logo.svg" alt="premium logo icon" />
+            </div>
+            <div class="nav-text">Premium</div>
+          </div>
+
+          <!-- Lists of mobile view and desktop view-->
+          <div class="mobile-desktop-view-items">
+            <div class="nav-icon">
+              <img src="icons/list.svg" alt="list logo icon"/>
+            </div>
+            <div class="nav-text">Lists</div>
+          </div>
+
+          <!-- Bookmarks of mobile view and desktop view-->
+          <div class="mobile-desktop-view-items">
+            <div class="nav-icon">
+              <img src="icons/bookmark.svg" alt="bookmark logo icon"/>
+            </div>
+            <div class="nav-text">Bookmarks</div>
+          </div>
+
+          <!-- Communities of mobile view and desktop view-->
+          <div class="mobile-desktop-view-items">
+            <div class="nav-icon">
+              <img src="icons/communities.svg" alt="communities logo icon">
+            </div>
+            <div class="nav-text">Communities</div>
+          </div>
+
+          <!-- Premium of desktop view-->
+          <div class="desktop-view-items">
+            <div class="nav-icon">
+              <img src="icons/logo.svg" alt="premium logo icon"/>
+            </div>
+            <div class="nav-text">Premium</div>
+          </div>
+
+          <!-- Profile of desktop-->
+          <div class="desktop-view-items">
+            <div class="nav-icon">
+              <img src="icons/person.svg" alt="profile logo icon"/>
+            </div>
+            <div class="nav-text">Profile</div>
+          </div>
+
+          <!-- more desktop view-->
+          <div class="desktop-view-items">
+            <div class="nav-icon">
+              <img src="icons/more.svg" alt="more logo icon"/>
+            </div>
+            <div class="nav-text">More</div>
+          </div>
+
+          <!-- monetization of mobile view-->
+          <div class="mobile-items">
+            <div class="nav-icon">
+              <img src="icons/monetization.svg" alt="monetization logo icon"/>
+            </div>
+            <div class="nav-text">Monetization</div>
+          </div>
+
+          <!-- Ads -->
+          <div class="mobile-items">
+            <div class="nav-icon">
+              <img src="icons/adds.svg" alt="ads logo icon"/>
+            </div>
+            <div class="nav-text">Ads</div>
+          </div>
+
+          <!-- settings and privacy-->
+          <div class="mobile-items">
+            <div class="nav-icon">
+              <img src="icons/settings.svg" alt="setting icon"/>
+            </div>
+            <div class="nav-text">Settings and privacy</div>
+          </div>
+
+          <!-- log out-->
+          <div class="mobile-items">
+            <div class="nav-icon">
+              <img src="icons/logout.svg" alt="logo out"/>
+            </div>
+            <div class="nav-text">Log out</div>
+          </div>
+        </div>
+
+        <div class="post-button">
+          <button>Post</button>
+        </div>
+
+        <div class="footer">
+          <div class="img">
+            <img src="images/profile pic.png" alt="profile" />
+          </div>
+          <div class="name">
+            <div>Nitesh Gupta</div>
+            <div>@nit_hck</div>
+          </div>
+          <div class="expand"><p>...</p></div>
         </div>
       </div>
-      <div class="content">
-        <div class="content-header">
-          <div class="for-you">For you</div>
-          <div class="following">Following</div>
-          <div class="settings-icon">
-            <img src="icons/settings.svg" alt="settings" />
-          </div>
-        </div>
         <div class="tweet-box">
           <div class="input-container">
             <div class="profile-img">
@@ -121,17 +222,22 @@
               </div>
             </div>
 
-            <div class="tweet-btn inactive-button">
+            <div class="tweet-btn">
               <button onclick="createPost()">Post</button>
             </div>
           </div>
-        </div>
 
         <div class="post-container"></div>
+        </div>
+
       </div>
 
       <!-- </div> -->
-      <div class="right-side"></div>
+      <div class="right-side">
+        <button class="floating-tweet-box-icon">
+          <img src="icons/feather.svg" alt="" />
+        </button>
+      </div>
     </div>
     <script src="scripts/index.js"></script>
   </body>

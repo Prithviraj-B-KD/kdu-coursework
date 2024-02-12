@@ -42,8 +42,9 @@ function createPost() {
 
   const likeIcon = document.createElement("div");
   likeIcon.classList.add("post-icon");
+  likeIcon.classList.add("like-post");
   likeIcon.innerHTML =
-    '<img src="icons/like.svg" alt="like" class="like-post"/>';
+    '<button class="like-button"><img src="icons/like.svg" alt="" id="heart" /><span class="like-count"></span></button>';
 
   const statsIcon = document.createElement("div");
   statsIcon.classList.add("post-icon");
@@ -108,3 +109,32 @@ function toggleButtonState() {
   }
 }
 tweetInput.addEventListener("input", toggleButtonState);
+
+const likeButton = document.querySelector(".like-post");
+const likesCountElement = document.querySelector(".likes-count");
+
+let isLiked = false; // Track like status, initially not liked
+
+function toggleLike() {
+  isLiked = !isLiked; // Toggle like status on each click
+
+  if (isLiked) {
+    likeButton.classList.add("unlike-post"); // Add unlike-post class for red color
+    likeButton.title = "Unlike";
+
+    // Increase likes count (assuming likesCountElement displays count)
+    let likesCount = parseInt(likesCountElement.textContent, 10);
+    likesCount++;
+    likesCountElement.textContent = likesCount;
+  } else {
+    likeButton.classList.remove("unlike-post"); // Remove unlike-post class
+    likeButton.title = "Like";
+
+    // Decrease likes count
+    let likesCount = parseInt(likesCountElement.textContent, 10);
+    likesCount--;
+    likesCountElement.textContent = likesCount;
+  }
+}
+
+likeButton.addEventListener("click", toggleLike);
