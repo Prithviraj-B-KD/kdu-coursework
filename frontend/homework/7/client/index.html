@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Web Socket Implementation</title>
+  </head>
+  <body>
+    <header>
+      <div class="page-title">KDU CHAT APP</div>
+    </header>
+    <main>
+      <div class="messages-container"></div>
+      <div class="input-container">
+        <form id="input-form">
+          <input
+            type="text"
+            id="input-box"
+            name="message-input"
+            placeholder="Enter your message..."
+          />
+          <button type="submit" class="input-button">&#x2191;</button>
+        </form>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.socket.io/4.7.4/socket.io.min.js"
+      integrity="sha384-Gr6Lu2Ajx28mzwyVR8CFkULdCU7kMlZ9UthllibdOSo6qAiN+yXNHqtgdTvFXMT4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
