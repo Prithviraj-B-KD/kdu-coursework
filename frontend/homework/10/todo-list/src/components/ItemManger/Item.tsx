@@ -1,15 +1,13 @@
-import { useContext } from 'react';
+import React from 'react';
 import "../../styles/ItemManagerStyles/Item.css"
 
-import { ItemProps } from '../../types/ItemProps';
-import { ItemContext } from '../../context/ItemContext';
 
 
-function Item({id,name}: ItemProps) {
-    const { items, setItems } = useContext(ItemContext);
+
+function Item({id,name,items,setItems}: any) {
     const deleteItem = (itemId: number) => {
         // Implement delete logic, update items accordingly
-        setItems(items.filter((item) => item.id !== itemId));
+        setItems(items.filter((item: { id: number; }) => item.id !== itemId));
     };
     
   const handleDelete = async () => {

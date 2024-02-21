@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import "../styles/Navbar.css"
-import { SearchContext } from '../context/SearchContext';
 
 
-function Navbar() {
-    const { searchQuery, setSearchQuery } = useContext(SearchContext);
+
+function Navbar({searchQuery , setSearchQuery}:any) {
+
     return ( 
 
         <div className="navbar-container">
