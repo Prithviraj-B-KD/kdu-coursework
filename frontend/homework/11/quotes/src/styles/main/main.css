@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  margin: 3vh 40vh;
+}
+
+.new-Quotes-button {
+  border: none;
+  background-color: #ffe3ca;
+  color: #0c359e;
+  padding: 15px 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.filters {
+  display: flex;
+  margin-bottom: 30px;
+  padding: 20px 2px 20px;
+  border-bottom: 1px solid black;
+  align-items: flex-end;
+}
+.filters .sub-heading {
+  font-size: 1.5rem;
+  align-self: center;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 10px;
+}
+
+.filtered-tag {
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  padding: 8px 15px;
+  font-weight: bold;
+  background-color: #ee99c2;
+  border-radius: 80px;
+  margin-right: 10px;
+}
+.filtered-tag button {
+  cursor: pointer;
+  align-self: flex-end;
+  background-color: #ee99c2;
+  margin-left: 10px;
+  border: none;
+  font-weight: bold;
+}/*# sourceMappingURL=main.css.map */
