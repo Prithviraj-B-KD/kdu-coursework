@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/messages-style.css" />
+    <title>Messages / X</title>
+  </head>
+  <body>
+    <main>
+      <div class="message-page-container">
+        <div class="left-container">
+          <div class="side-navigation-panel">
+            <div class="nav-items desktop-view">
+              <div class="nav-icon">
+                <img src="../icons/side-nav-icons/logo.svg" alt="x-logo icon" />
+              </div>
+            </div>
+            <a href="../index.html">
+              <div class="nav-items desktop-view">
+                <div class="nav-icon">
+                  <img
+                    src="../icons/side-nav-icons/home.svg"
+                    alt="x-logo icon"
+                  />
+                </div>
+                <div class="nav-text">Home</div>
+              </div>
+            </a>
+            <div class="nav-items desktop-view">
+              <div class="nav-icon">
+                <img
+                  src="../icons/side-nav-icons/search.svg"
+                  alt="explore logo icon"
+                />
+              </div>
+              <div class="nav-text">Explore</div>
+            </div>
+            <div class="nav-items desktop-view">
+              <div class="nav-icon">
+                <img
+                  src="../icons/side-nav-icons/notification.svg"
+                  alt="notification logo icon"
+                />
+              </div>
+              <div class="nav-text">Notifications</div>
+            </div>
+            <a href="#">
+              <div class="nav-items desktop-view">
+                <div class="nav-icon">
+                  <img
+                    src="../icons/side-nav-icons/message-clicked.svg"
+                    alt="message logo icon"
+                  />
+                </div>
+                <div class="nav-text">Messages</div>
+              </div>
+            </a>
+            <div class="nav-items desktop-view">
+              <div class="nav-icon">
+                <img
+                  src="../icons/side-nav-icons/grok.svg"
+                  alt="grok logo icon "
+                />
+              </div>
+              <div class="nav-text">Grok</div>
+            </div>
+            <div class="nav-items desktop-view">
+              <div class="nav-icon">
+                <img
+                  src="../icons/side-nav-icons/list.svg"
+                  alt="list logo icon"
+                />
+              </div>
+              <div class="nav-text">Lists</div>
+            </div>
+
+            <div class="nav-items desktop-view">
+              <div class="nav-icon">
+                <img
+                  src="../icons/side-nav-icons/bookmark.svg"
+                  alt="bookmark logo icon"
+                />
+              </div>
+              <div class="nav-text">Bookmarks</div>
+            </div>
+
+            <div class="nav-items desktop-view">
+              <div class="nav-icon">
+                <img
+                  src="../icons/side-nav-icons/communities.svg"
+                  alt="communities logo-icon"
+                />
+              </div>
+              <div class="nav-text">Communities</div>
+            </div>
+            <div class="nav-items desktop-view">
+              <div class="nav-icon">
+                <img
+                  src="../icons/side-nav-icons/logo.svg"
+                  alt="premium logo icon"
+                />
+              </div>
+              <div class="nav-text">Premium</div>
+            </div>
+            <div class="desktop-view nav-items">
+              <div class="nav-icon">
+                <img
+                  src="../icons/side-nav-icons/person.svg"
+                  alt="profile logo icon"
+                />
+              </div>
+              <div class="nav-text">Profile</div>
+            </div>
+
+            <div class="desktop-view nav-items">
+              <div class="nav-icon">
+                <img
+                  src="../icons/side-nav-icons/more.svg"
+                  alt="more logo icon"
+                />
+              </div>
+              <div class="nav-text">More</div>
+            </div>
+            <div class="button-div">
+              <button class="side-nav-post-button">Post</button>
+            </div>
+            <div class="profile-section">
+              <div class="profile-img-div">
+                <img
+                  class="profile-img"
+                  src="../icons/profile pic.png"
+                  alt=""
+                />
+              </div>
+              <div class="profile-info">
+                <p class="profile-name">Nitesh Gupta</p>
+                <p class="profile-username">@nit_hck</p>
+              </div>
+              <div class="stats">
+                <p><bold>1 </bold><span class="following"> Following</span></p>
+                &nbsp; &nbsp; &nbsp;
+                <p><bold>0 </bold><span class="followers"> Followers</span></p>
+              </div>
+              <div class="dots-button">
+                <img
+                  src="../icons/side-nav-icons/three_dots.svg"
+                  alt="dot-icon"
+                  class="dots-icon"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="center-container">
+          <div class="message-title-container">
+            <div class="message-title">
+              <div class="profile-img-div mobile-view">
+                <img
+                  class="profile-img"
+                  src="../icons/profile pic.png"
+                  alt=""
+                />
+              </div>
+              <div class="message-title-text">Messages</div>
+            </div>
+            <div class="icon settings">
+              <img
+                src="../icons/side-nav-icons/settings.svg"
+                alt="settings-icon"
+                class="settings-icon"
+              />
+            </div>
+            <div class="icon message-plus">
+              <img
+                src="../icons/side-nav-icons/plus.svg"
+                alt="message-plus-icon"
+                class="plus-icon"
+              />
+            </div>
+          </div>
+          <div class="active-users-container"></div>
+        </div>
+        <div class="right-container">
+          <div class="username-div"></div>
+          <div class="messages-container"></div>
+          <div class="messages-input-div">
+            <div class="message-input-bar">
+              <div class="message-input">
+                <input
+                  type="text"
+                  id="message-input-box"
+                  placeholder="Start a new message"
+                />
+              </div>
+              <button class="message-button">
+                <img src="../icons/send-icon-active.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="floating-message-box-icon">
+        <img src="../icons/message-plus-icon.svg" alt="icon" class="icon-img" />
+      </div>
+    </main>
+    <div class="bottom-navigation-bar mobile-view">
+      <a href="../index.html">
+        <div class="home">
+          <img src="../icons/home-blue-dot.svg" alt="home-icon" />
+        </div>
+      </a>
+      <div class="search">
+        <img src="../icons/search (1).svg" alt="search-icon" />
+      </div>
+      <div class="grok">
+        <img src="../icons/grok-icon.svg" alt="grok-icon" />
+      </div>
+      <div class="notification">
+        <img src="../icons/notification-icon.svg" alt="notification-icon" />
+      </div>
+      <a href="html/messages.html" id="messages"
+        ><div class="messages">
+          <img
+            src="../icons/side-nav-icons/message-clicked.svg"
+            alt="message-icon"
+          /></div
+      ></a>
+    </div>
+    <script
+      src="https://cdn.socket.io/4.7.4/socket.io.min.js"
+      integrity="sha384-Gr6Lu2Ajx28mzwyVR8CFkULdCU7kMlZ9UthllibdOSo6qAiN+yXNHqtgdTvFXMT4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../scripts/messages.js"></script>
+  </body>
+</html>
