@@ -8,7 +8,7 @@ function NavbarListPage() {
     
 
     const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSearchQuery(event.target.value);
+        setSearchQuery(searchInputRef.current?.value);
       };
     
       const handleFilterChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
