@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>KDU Stock Market</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="title">KDU Stock Market Dashboard</div>
+      </header>
+
+      <div class="stock-dashboard">
+        <div class="statistics">
+          <div class="operations-board">
+            <div class="stock-logo">
+              <div class="logo">
+                <img src="images/zomata.jpg" alt="stock-logo" />
+              </div>
+              <div class="stock-name">Zomato</div>
+            </div>
+            <div class="stock-price-container">
+              <div class="stock-price-container-title">Price</div>
+              <div class="stock-price-div">
+                <div class="stock-price market-up" id="stock-price">143.32</div>
+                <div class="stock-price-arrow market-up" id="stock-price-arrow">
+                  &#8593;
+                </div>
+              </div>
+
+              <div class="stock-price-percentage" id="stock-price-percentage">
+                3.00%
+              </div>
+            </div>
+            <div class="stock-trader-input">
+              <input
+                name="stock-trader-input-box"
+                id="stock-trader-input-box"
+                placeholder="Enter QTY"
+                required
+              />
+              <button id="buy-button">BUY</button>
+              <button id="sell-button">SELL</button>
+            </div>
+          </div>
+          <div class="graph">
+            <div class="graph-grid">
+              <div class="col">
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row last-box"></div>
+              </div>
+              <div class="col">
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row last-box"></div>
+              </div>
+              <div class="col">
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row last-box"></div>
+              </div>
+              <div class="col last-box">
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row last-box"></div>
+              </div>
+              <div class="col">
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row"></div>
+              </div>
+              <div class="col last-box">
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row last-box"></div>
+              </div>
+            </div>
+            <div class="graph-bars">
+              <div class="bar market-up-bar"></div>
+              <div class="bar market-down-bar"></div>
+              <div class="bar market-up-bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="history">
+          <div class="history-title">History</div>
+          <div class="transactions-container">
+            <div class="transaction">
+              <div class="transaction-info">
+                <div class="quantity">
+                  <div class="stock-number">100 Stocks Rs.14200.5</div>
+                  <div class="stock-date">Fri 02 Feb 1996 21:04:05 GMT</div>
+                </div>
+              </div>
+              <div class="transaction-type market-up">BUY</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.socket.io/4.7.4/socket.io.min.js"
+      integrity="sha384-Gr6Lu2Ajx28mzwyVR8CFkULdCU7kMlZ9UthllibdOSo6qAiN+yXNHqtgdTvFXMT4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
