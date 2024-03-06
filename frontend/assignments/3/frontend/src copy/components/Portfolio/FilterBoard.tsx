@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { AppDispatch } from "../../redux/store";
 import { useDispatch } from "react-redux";
-import { clearAll } from "../../redux/slice/FitlerSlice";
+import { clearAll } from "../../redux/slice/PriceSlice";
 import React from "react";
 import dayjs, { Dayjs } from "dayjs";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";

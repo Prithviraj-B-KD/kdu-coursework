@@ -10,9 +10,9 @@ import { Box, Card, CardContent, Typography} from "@mui/material";
     sellPrice?: number;
   }
 
-function StockCard({buyDate,sellDate,maxProfit,stock_name,buyPrice,sellPrice,symbol}:StockCardProps) {
+function StockCard({ buyDate, sellDate, maxProfit, stock_name, buyPrice, sellPrice, symbol }: StockCardProps) {
     return (  
-        <Card sx={{backgroundColor: maxProfit > 0 ? "#1971c2": "#e03131",margin:"10px 10px"}}>
+        <Card sx={{backgroundColor: maxProfit > 0 ? "#1971c2": "#e03131",margin:"10px 10px",color:"#fff"}}>
             <CardContent sx={{display:"flex",justifyContent:"space-between"}}>
                 <Box>
                 <Typography variant="h5">{symbol}</Typography>

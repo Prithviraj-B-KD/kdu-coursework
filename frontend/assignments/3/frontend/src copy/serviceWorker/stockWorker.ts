@@ -17,27 +17,26 @@ function calculateBestBuySell({
   let buyDate = "";
   let sellDate = "";
   let minPrice = Infinity;
-  let buyPrice = 100;
-  let sellPrice = 200;
+  let buyPrice = 0;
+  let sellPrice = 0;
 
-  for (let i = 0; i < data.length; i++) {
-    const currentPrice = data[i].prices[0];
-    let maxProfitForDay = 0;
-    for (let j = i + 1; j < data.length; j++) {
-      const profit = data[j].prices[0] - currentPrice;
-      if (profit > maxProfitForDay) {
-        maxProfitForDay = profit;
+  for (let { date, prices: currentPrices } of data) {
+    for (const currentPrice of currentPrices) {
+      if (currentPrice < minPrice) {
+        minPrice = currentPrice;
+        date = new Date(date);
+        buyDate = date.toISOString();
+        buyPrice = currentPrice;
+        console.log(buyPrice);
+      } else {
+        const profit = currentPrice - minPrice;
+        if (profit > maxProfit) {
+          maxProfit = profit;
+          date = new Date(date);
+          sellDate = date.toISOString();
+          sellPrice = currentPrice;
+        }
       }
-      if (maxProfitForDay > maxProfit) {
-        // sellDate = data[j - 1].date.toISOString();
-        break;
-      }
-    }
-    minPrice = Math.min(minPrice, currentPrice);
-    if (maxProfitForDay > maxProfit) {
-      maxProfit = maxProfitForDay;
-      // buyDate = data[i].date.toISOString();
-      console.log(maxProfit);
     }
   }
   return {

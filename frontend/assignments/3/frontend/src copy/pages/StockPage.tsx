@@ -5,30 +5,33 @@ import { Box} from "@mui/material";
 import LiveBroadBastBox from "../components/StockPage/LiveBroadCastBox.tsx";
 import ControlPanel from "../components/StockPage/ControlPanel.tsx";
 import Graph from "../components/StockPage/Graph.tsx";
-import { useSelector } from "react-redux";
-import { RootState } from "../redux/store.ts";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "../redux/store.ts";
 import { useEffect, useState } from "react";
 import { Stocks } from "../types/Stocks.ts";
+import { setStockPrice } from "../redux/slice/PriceSlice.ts";
 
 function StockPage() {
+  const reduxDispatch: AppDispatch = useDispatch();
   const { id } = useParams();
   const stocks = useSelector((state: RootState) => state.stocks.stocks);
+  const price = useSelector((state: RootState) => state.price.price);
   const [stock, setStock] = useState<Stocks>();
   const [graphBarValues, setGraphBarValues] = useState<number[]>([]);
-  const intervalRef = useRef(null);
-
   useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      // Generate a random number within your desired range
-      const newValue = Math.floor(Math.random() * 100); // Replace 100 with your desired max value
+    const intervalId = setInterval(() => {
+      const newData = Math.floor(Math.random() * 500);
+      if (graphBarValues.length > 37) {
+        setGraphBarValues([]);
+      }
+      setGraphBarValues((prevPrices) => [...prevPrices, newData]);
+reduxDispatch(setStockPrice(newData))
+    }, 2000);
 
-      // Use the spread operator (...) to create a new array with the updated values
-      setGraphBarValues([...graphBarValues, newValue]);
-    }, 5000); // Interval set to 5 seconds (5000 milliseconds)
+    return () => clearInterval(intervalId);
+  }, [graphBarValues, reduxDispatch]);
 
-    // Cleanup function to clear the interval when the component unmounts
-    return () => clearInterval(intervalRef.current);
-  }, []);
+
   useEffect(
     () => setStock(stocks.find((stock) => stock.stock_name === id)),
     [stock, id, stocks]
@@ -39,9 +42,9 @@ function StockPage() {
       <Box sx={{display:"flex" , marginTop:"10px"}}>
         <Box sx={{ width: "75%" }}>
           {stock && <>
-            <ControlPanel stocks={stocks} id={id} />
-            <Box sx={{ position: "relative", }}>
-              <Graph base={stock?.base_price} barGaphValues={[]} />
+            <ControlPanel stocks={stocks} id={id} price={price} />
+            <Box sx={{ position: "relative",height:"500px",marginTop:"20px",marginRight:"30px",marginLeft:"29px"}}>
+              <Graph base={stock?.base_price} barGaphValues={graphBarValues} />
             </Box>
           </>
           }

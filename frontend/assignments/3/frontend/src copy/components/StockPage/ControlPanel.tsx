@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { Stocks } from "../../types/Stocks";
 import { PortfolioStockTransactions, Status } from "../../types/PortfolioTransaction";
 import { io } from "socket.io-client";
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import { ArrowDownward } from "@mui/icons-material";
 
 const styles: { [key: string]: React.CSSProperties } = {
   sell_button: {
@@ -58,15 +60,17 @@ const styles: { [key: string]: React.CSSProperties } = {
 
 interface ControlPanelProps {
   id: string | undefined;
-  stocks: Stocks[];
+    stocks: Stocks[];
+    price: number;
 }
 
-function ControlPanel({ id, stocks }: ControlPanelProps) {
+function ControlPanel({ id, stocks,price }: ControlPanelProps) {
     const [currentBalance, setCurrentBalance] = useState<number>(1000);
     const [quantity, setQuantity] = useState<string>("");
     const [stock, setStock] = useState<Stocks>();
     const [prices, setPrices] = useState<number[]>([]);
     const [news, setNews] = useState<string[]>([]);
+    const [currentShares, setCurrentShares] = useState<number>(0);
 
     useEffect(() => {
         const socket = io('http://localhost:7000');
@@ -110,7 +114,31 @@ function ControlPanel({ id, stocks }: ControlPanelProps) {
     }
 
     const handleSellTransaction = () => {
-        
+        if (!quantity) {
+            alert('Please enter a quantity.');
+            return;
+        }
+  
+        const qty = parseInt(quantity, 10);
+        if (isNaN(qty) ?? qty <= 0) {
+            alert('Please enter a valid quantity.');
+            return;
+        }
+  
+  
+        if (qty <= currentShares) {
+  
+            if (stock) {
+                const transaction: PortfolioStockTransactions = {
+                    stock_name: stock.stock_name,
+                    stock_symbol: stock.stock_symbol,
+                    transaction_price: stock.base_price,
+                    timestamp: new Date().toISOString(),
+                    status: Status.Failed,
+                }
+
+            }
+        }
     }
 
   useEffect(
@@ -168,13 +196,17 @@ function ControlPanel({ id, stocks }: ControlPanelProps) {
             ))}
           </Menu>
         </Dropdown>
-      </Box>
-      <Box style={styles.display_price_container}>
-        <Typography sx={{ fontWeight: "500" }}>Price</Typography>
-        <Typography style={styles.currentPrice}>142.32</Typography>
-        <Box>^</Box>
-        <Typography style={styles.percentage}>3.00%</Typography>
-      </Box>
+          </Box>
+          
+          
+              <Box style={styles.display_price_container}>
+                  <Typography sx={{ fontWeight: "500" }}>Price</Typography>
+                  <Typography sx={{color: price < stock?.base_price ?  "red" : "green"}} style={styles.currentPrice}>{price}</Typography>
+              <Box sx={{color: price < stock?.base_price ?  "red" : "green"}}><ArrowDownward /></Box>
+              
+              <Typography sx={{color: price < stock?.base_price ?  "red" : "green"}} style={styles.percentage}>{price / 100}%</Typography>
+              </Box>
+          
 
       <Box style={styles.button_container}>
         <Box>

@@ -24,6 +24,10 @@ function SummarizerPage() {
   const allStocks = useSelector(
     (state: RootState) => state.allStocksTransactions.allStocksTransactions
   );
+  function formatDate(dateString: string | number | Date) {
+    const options = { day: 'numeric', month: 'short', year: 'numeric' };
+    return new Date(dateString).toLocaleDateString('en-GB', options).replace(/ /g, '-');
+  }
   const reduxDispatch: AppDispatch = useDispatch();
   useEffect(() => {
     reduxDispatch(getAllStocksTransactions());
@@ -70,8 +74,10 @@ function SummarizerPage() {
           stock_name={stockSum.stock_name}
           symbol={stockSum.symbol}
           maxProfit={stockSum.maxProfit}
-          buyDate={stockSum.buyDate}
-          sellDate={stockSum.sellDate}
+          buyDate={formatDate(stockSum.buyDate)}
+          sellDate={formatDate(stockSum.sellDate)}
+          buyPrice={stockSum.buyPrice}
+          sellPrice={stockSum.sellPrice}
         />
       ))}
     </>
