@@ -1,4 +1,4 @@
-package com.kdu.caching.service;
+package com.example.assigment2.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.*;
@@ -23,9 +23,9 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest
+@SpringBootTest(classes = {com.example.assigment2.service.GeoCodingImpTest.class})
 @AutoConfigureMockMvc
-@ComponentScan(basePackages = "com.kdu.caching")
+@ComponentScan(basePackages = "com.example.assignment2")
 public class GeoCodingImpTest {
     private static Object expectedGeoCodingApiResponse;
     private static Object expectedReverseGeoCodingApiResponse;
