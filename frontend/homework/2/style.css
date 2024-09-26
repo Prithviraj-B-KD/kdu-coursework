@@ -1,0 +1,87 @@
+body {
+  margin: 10px;
+  padding: 0;
+}
+
+.weather-forecast-heading h1 {
+  font-family: Arial;
+  font-weight: 300;
+  margin: 10px 0 0 0;
+  font-size: 55px;
+}
+
+.weather-forecast-subheading h2 {
+  color: #7b7979;
+  margin: 0 5px;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.weather-now-status-icon {
+  display: grid;
+  padding: 0 10px 0;
+  color: #7b7979;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: 12.5px 12.5px 25px 25px 25px;
+}
+.weather-now-status-icon img {
+  width: 100px;
+  grid-row: 1/span 4;
+}
+.weather-now-status-icon .value {
+  padding: 2px;
+  grid-row-start: 2;
+  text-align: center;
+  grid-column-start: 3;
+  font-size: 45px;
+}
+.weather-now-status-icon .farent {
+  padding: 0 5px;
+  grid-column-start: 4;
+  grid-row-start: 3;
+  font-size: 15px;
+}
+
+.weather-now-readings {
+  font-family: Arial;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.weather-now-readings .weather-now-status-info p {
+  color: #7b7979;
+  font-size: 17px;
+  margin: 0 4px;
+}
+.weather-now-readings .weather-now-status-info p strong {
+  font-weight: 550;
+}
+
+.weather-whole-week-forecast {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  margin: 8px;
+}
+.weather-whole-week-forecast .weather-one-day-forecast {
+  display: grid;
+  grid-template-columns: repeat(7, 15px);
+  grid-template-rows: repeat(6, 20px);
+}
+.weather-whole-week-forecast .day-name {
+  font-weight: 600;
+  font-size: 12px;
+  grid-column: 2/5;
+  grid-row-start: 1;
+}
+.weather-whole-week-forecast .weather-status-icon {
+  margin: 0;
+  grid-column: 1/-1;
+  grid-row-start: 2;
+}
+.weather-whole-week-forecast .weather-status-info {
+  color: #7b7979;
+  grid-column: 2/6;
+  grid-row-start: 5;
+}
+.weather-whole-week-forecast .weather-status-info-subheading {
+  font-size: 12px;
+}/*# sourceMappingURL=style.css.map */
