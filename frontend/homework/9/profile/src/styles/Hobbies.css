@@ -1,0 +1,15 @@
+#Hobbies {
+  width: 40%;
+  height: 50vh;
+  background-color: #a4f0af;
+  padding: 20px;
+}
+
+#Hobbies h1 {
+  color: #d89b32;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
